@@ -3,17 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mitesh Singh - Data Driven Enthusiast ">
+    <meta name="description" content="Mitesh Singh - Data Scientist and ML Engineer specializing in advanced analytics and intelligent systems">
     <title>Mitesh Singh - Data Science & ML Engineering Portfolio</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
         :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2d3748;
-            --accent-color: #3182ce;
+            --primary-color: #1e3a8a;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
             --background-color: #f8fafc;
-            --text-color: #1a202c;
-            --success-color: #48bb78;
+            --text-color: #0f172a;
+            --success-color: #059669;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         body {
@@ -26,9 +45,11 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(-45deg, #1e3a8a, #1e40af, #2563eb, #3b82f6);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             color: white;
-            padding: 4rem 0;
+            padding: 6rem 0 4rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -41,189 +62,191 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(49, 130, 206, 0.1) 0%, rgba(49, 130, 206, 0) 100%);
-            z-index: 1;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+
+        .profile-container {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
-            border: 4px solid white;
+            border: 4px solid rgba(255, 255, 255, 0.8);
             margin-bottom: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            position: relative;
-            z-index: 2;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.3s;
         }
 
         .section {
             background: white;
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .section:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: var(--card-hover-shadow);
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: white;
-            position: relative;
-            z-index: 2;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
+        .section:hover::before {
+            opacity: 1;
         }
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2.5rem;
         }
 
         .project-card {
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
             background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            position: relative;
+            overflow: hidden;
             height: 100%;
             display: flex;
             flex-direction: column;
         }
 
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-color: var(--accent-color);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
         }
 
         .project-header {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
         }
 
         .project-icon {
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin-right: 1rem;
             color: var(--accent-color);
+            transition: transform 0.3s ease;
         }
 
-        .project-metrics {
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid #e2e8f0;
-            font-size: 0.95rem;
-            color: var(--success-color);
+        .project-card:hover .project-icon {
+            transform: rotate(15deg);
         }
 
-        .skills {
+        .skill-tags-container {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .skill-tag {
-            background-color: #ebf8ff;
+            background: rgba(59, 130, 246, 0.1);
             color: var(--accent-color);
             padding: 0.6rem 1.2rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .skill-tag:hover {
-            background-color: var(--accent-color);
+            background: var(--accent-color);
             color: white;
             transform: translateY(-2px);
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-            position: relative;
-            z-index: 2;
+        .skill-icon {
+            font-size: 0.9rem;
         }
 
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.8rem;
-            transition: all 0.3s ease;
-            padding: 0.5rem;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .social-links a:hover {
-            transform: translateY(-3px) rotate(8deg);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .experience-item {
-            margin-bottom: 2.5rem;
+        .metric-card {
+            background: rgba(59, 130, 246, 0.05);
             padding: 1.5rem;
-            border-left: 3px solid var(--accent-color);
-            background: #f8fafc;
-            border-radius: 0 8px 8px 0;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
-        .date {
+        .metric-card:hover {
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 600;
             color: var(--accent-color);
-            font-weight: 500;
             margin-bottom: 0.5rem;
         }
 
-        .highlighted-text {
-            color: var(--accent-color);
-            font-weight: 500;
-        }
-
-        .tech-stack {
-            margin-top: 1rem;
+        .metric-label {
+            color: var(--text-color);
             font-size: 0.9rem;
-            color: var(--secondary-color);
-        }
-
-        .achievements {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .achievement-card {
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
         }
 
         @media (max-width: 768px) {
@@ -232,7 +255,7 @@
             }
             
             .section {
-                padding: 1.5rem;
+                padding: 2rem;
             }
 
             .projects {
@@ -240,28 +263,102 @@
             }
 
             .profile-img {
-                width: 150px;
-                height: 150px;
+                width: 180px;
+                height: 180px;
             }
+
+            .metrics-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-color), transparent);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) rotate(8deg);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://github.com/mitesh699.png" alt="Mitesh Singh" class="profile-img">
-        <h1>Mitesh Singh</h1>
-        <p>Data Scientist | ML Engineer | Information Systems Graduate</p>
-        <div class="social-links">
-            <a href="https://github.com/mitesh699?tab=repositories" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/miteshsingh99" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:miteshs0619@gmail.com" aria-label="Email Contact"><i class="fas fa-envelope"></i></a>
+        <div class="profile-container">
+            <img src="https://github.com/mitesh699.png" alt="Mitesh Singh" class="profile-img">
+            <h1>Mitesh Singh</h1>
+            <p>Data Scientist & ML Engineer</p>
+            <div class="social-links">
+                <a href="https://github.com/mitesh699" class="social-link" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/miteshsingh99" class="social-link" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:miteshs0619@gmail.com" class="social-link" aria-label="Email Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </div>
     </header>
 
-    <div class="container">
+    <main class="container">
         <section class="section">
             <h2>About Me</h2>
-            <p>I'm a Data Science professional completing my Master's in Information Systems at Northeastern University, with a proven track record in building and deploying sophisticated machine learning solutions. My expertise spans across the full data science lifecycle - from data architecture and pipeline development to model deployment and business intelligence. Recently recognized as part of a top-20 finalist team in the $50M XPrize Carbon Removal contest, I combine technical expertise with practical problem-solving to deliver impactful solutions.</p>
+            <p>As a Data Science professional completing my Master's in Information Systems at Northeastern University, I specialize in developing sophisticated machine learning solutions and data architectures. My work spans from conceptualizing AI-driven systems to implementing production-ready solutions that drive business value. Recently recognized as part of a top-20 finalist team in the $50M XPrize Carbon Removal contest, I bring a unique combination of technical expertise and innovative problem-solving to every project.</p>
         </section>
 
         <section class="section">
@@ -269,91 +366,283 @@
             <div class="projects">
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-route project-icon"></i>
+                        <i class="fas fa-brain project-icon"></i>
                         <h3>GraphRAG Travel Recommender</h3>
                     </div>
-                    <p>An innovative travel recommendation system combining graph databases with retrieval-augmented generation (RAG) to deliver hyper-personalized travel itineraries. The system leverages advanced LLM capabilities and semantic search to understand complex user preferences and constraints.</p>
-                    <div class="tech-stack">
-                        <strong>Tech Stack:</strong> Neo4j AuraDB, GPT-4o-mini, LangChain, Pinecone, Airflow, Snowflake, dbt
+                    <p>An innovative AI-powered travel recommendation system that combines graph databases with retrieval-augmented generation (RAG) to deliver hyper-personalized travel itineraries. The system leverages cutting-edge LLM capabilities and semantic search to understand complex user preferences and constraints.</p>
+                    
+                    <div class="skill-tags-container">
+                        <span class="skill-tag">
+                            <i class="fas fa-database skill-icon"></i>
+                            Neo4j AuraDB
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-robot skill-icon"></i>
+                            GPT-4
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-code-branch skill-icon"></i>
+                            LangChain
+                        </span>
                     </div>
-                    <div class="project-metrics">
-                        <p><i class="fas fa-chart-line"></i> 95% Query Coverage</p>
-                        <p><i class="fas fa-tachometer-alt"></i> 30% Processing Efficiency Gain</p>
-                        <p><i class="fas fa-bullseye"></i> 25% Improved Response Accuracy</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">95%</div>
+                            <div class="metric-label">Query Coverage</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">30%</div>
+                            <div class="metric-label">Efficiency Gain</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">25%</div>
+                            <div class="metric-label">Accuracy Boost</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
                         <i class="fas fa-plane project-icon"></i>
-                        <h3>Flight Price Forecasting System</h3>
+                        <h3>Intelligent Flight Forecasting</h3>
                     </div>
-                    <p>An end-to-end airline recommendation platform featuring advanced time series forecasting and cloud deployment. The system combines ARIMA modeling with intuitive user interface design to deliver accurate flight predictions and suggestions.</p>
-                    <div class="tech-stack">
-                        <strong>Tech Stack:</strong> Databricks, Amazon S3, ARIMA, Streamlit, Python
+                    <p>A sophisticated airline recommendation platform featuring advanced time series forecasting and cloud deployment. The system combines ARIMA modeling with an intuitive user interface to deliver precise flight predictions and personalized suggestions.</p>
+                    
+                    <div class="skill-tags-container">
+                        <span class="skill-tag">
+                            <i class="fas fa-cloud skill-icon"></i>
+                            Databricks
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-chart-line skill-icon"></i>
+                            ARIMA
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-stream skill-icon"></i>
+                            Streamlit
+                        </span>
                     </div>
-                    <div class="project-metrics">
-                        <p><i class="fas fa-bolt"></i> 35% Faster Processing</p>
-                        <p><i class="fas fa-chart-bar"></i> 30% Enhanced Accuracy</p>
-                        <p><i class="fas fa-check-circle"></i> 92% Success Rate</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">35%</div>
+                            <div class="metric-label">Processing Speed</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">30%</div>
+                            <div class="metric-label">Accuracy Gain</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">92%</div>
+                            <div class="metric-label">Success Rate</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Data Science Co-op at Takachar</h3>
-                <p class="date">February 2024 – August 2024</p>
-                <p>Led data optimization initiatives and developed robust analytical solutions for a climate tech startup, contributing to significant operational improvements and recognition in the XPrize competition.</p>
-                <div class="achievements">
-                    <div class="achievement-card">
-                        <p><i class="fas fa-chart-pie"></i> 30% Optimization in Data Collection</p>
-                    </div>
-                    <div class="achievement-card">
-                        <p><i class="fas fa-tools"></i> 18% Equipment Downtime Reduction</p>
-                    </div>
-                    <div class="achievement-card">
-                        <p><i class="fas fa-trophy"></i> XPrize Top-20 Finalist</p>
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <h3>Data Science Co-op at Takachar</h3>
+                    <p class="date">February 2024 – August 2024</p>
+                    <p>Led transformative data initiatives at a climate tech startup, implementing sophisticated data collection and analysis systems that drove significant operational improvements.</p>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">30%</div>
+                            <div class="metric-label">Data Collection Optimization</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">18%</div>
+                            <div class="metric-label">Equipment Efficiency Boost</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">Top 20</div>
+                            <div class="metric-label">XPrize Finalist</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>Technical Skills</h2>
+            <h2>Technical Expertise</h2>
+            
             <div class="skill-category">
-                <h3>Core Technologies</h3>
-                <div class="skills">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">R</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">PyTorch</span>
+                <h3><i class="fas fa-code"></i> Programming & Development</h3>
+                <div class="skill-tags-container">
+                    <span class="skill-tag">
+                        <i class="fas fa-python skill-icon"></i>
+                        Python
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-database skill-icon"></i>
+                        SQL
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-chart-line skill-icon"></i>
+                        R
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-terminal skill-icon"></i>
+                        Visual Studio Code
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-book-reader skill-icon"></i>
+                        Jupyter Notebook
+                    </span>
                 </div>
             </div>
+
             <div class="skill-category">
-                <h3>Cloud & Infrastructure</h3>
-                <div class="skills">
-                    <span class="skill-tag">AWS S3</span>
-                    <span class="skill-tag">Google Cloud AI</span>
-                    <span class="skill-tag">Snowflake</span>
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">Databricks</span>
+                <h3><i class="fas fa-brain"></i> Machine Learning & AI</h3>
+                <div class="skill-tags-container">
+                    <span class="skill-tag">
+                        <i class="fas fa-cube skill-icon"></i>
+                        TensorFlow
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-fire skill-icon"></i>
+                        PyTorch
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-cogs skill-icon"></i>
+                        scikit-learn
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-layer-group skill-icon"></i>
+                        Keras
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-robot skill-icon"></i>
+                        Hugging Face
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-magic skill-icon"></i>
+                        OpenAI API
+                    </span>
                 </div>
             </div>
+
             <div class="skill-category">
-                <h3>Tools & Frameworks</h3>
-                <div class="skills">
-                    <span class="skill-tag">Apache Airflow</span>
-                    <span class="skill-tag">Neo4j</span>
-                    <span class="skill-tag">Hugging Face</span>
-                    <span class="skill-tag">LangChain</span>
-                    <span class="skill-tag">dbt</span>
+                <h3><i class="fas fa-network-wired"></i> Deep Learning & NLP</h3>
+                <div class="skill-tags-container">
+                    <span class="skill-tag">
+                        <i class="fas fa-project-diagram skill-icon"></i>
+                        CNNs
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-repeat skill-icon"></i>
+                        RNNs
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-language skill-icon"></i>
+                        Transformers
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-comments skill-icon"></i>
+                        NLTK
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-cloud"></i> Cloud & Data Infrastructure</h3>
+                <div class="skill-tags-container">
+                    <span class="skill-tag">
+                        <i class="fab fa-aws skill-icon"></i>
+                        AWS S3
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fab fa-google skill-icon"></i>
+                        Google Cloud AI
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-snowflake skill-icon"></i>
+                        Snowflake
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fab fa-microsoft skill-icon"></i>
+                        Azure
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-database skill-icon"></i>
+                        SQL Server
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-project-diagram skill-icon"></i>
+                        Neo4j
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-code-branch skill-icon"></i>
+                        dbt
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-chart-bar"></i> Visualization & Analytics</h3>
+                <div class="skill-tags-container">
+                    <span class="skill-tag">
+                        <i class="fas fa-chart-pie skill-icon"></i>
+                        Tableau
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-chart-line skill-icon"></i>
+                        Power BI
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-analytics skill-icon"></i>
+                        Looker Studio
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-file-excel skill-icon"></i>
+                        Microsoft Excel
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-chart-area skill-icon"></i>
+                        Seaborn
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-chart-scatter skill-icon"></i>
+                        Plotly
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Development Tools & Platforms</h3>
+                <div class="skill-tags-container">
+                    <span class="skill-tag">
+                        <i class="fas fa-stream skill-icon"></i>
+                        Streamlit
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-random skill-icon"></i>
+                        Talend Studio
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-bolt skill-icon"></i>
+                        Power Automate
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-dice-d20 skill-icon"></i>
+                        Alteryx
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fab fa-google skill-icon"></i>
+                        Google Colab
+                    </span>
+                    <span class="skill-tag">
+                        <i class="fas fa-microscope skill-icon"></i>
+                        R Studio
+                    </span>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 </body>
 </html>
