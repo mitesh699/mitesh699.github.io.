@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitesh Singh - Data Science Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2D3748;
+            --secondary-color: #4A5568;
+            --accent-color: #4299E1;
+            --background-color: #F7FAFC;
+            --text-color: #1A202C;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s;
+            background: white;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .project-metrics {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #E2E8F0;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background-color: #EBF8FF;
+            color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .skill-tag:hover {
+            background-color: #BEE3F8;
+        }
+
+        .skill-category {
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .date {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/api/placeholder/180/180" alt="Mitesh Singh" class="profile-img">
+        <h1>Mitesh Singh</h1>
+        <p>Data Scientist | ML Engineer | Information Systems</p>
+        <div class="social-links">
+            <a href="https://github.com/miteshs0619"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/miteshs0619"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:miteshs0619@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>About Me</h2>
+            <p>I'm a Data Science professional with a Master's in Information Systems from Northeastern University. I specialize in building and deploying machine learning models, developing data pipelines, and creating intelligent systems that solve real-world problems. With experience in both academic and professional settings, I've worked on projects ranging from travel recommendation systems to industrial optimization solutions.</p>
+        </section>
+
+        <section class="section">
+            <h2>Featured Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Travel Itinerary Recommender</h3>
+                    <p>A sophisticated recommendation system leveraging Pinecone Vector Database for semantic search and OpenAI LLM to power a GraphRAG chatbot, delivering personalized travel itineraries based on user preferences and contextual understanding.</p>
+                    <div class="project-metrics">
+                        <p>🚀 30% increase in processing efficiency</p>
+                        <p>📈 25% improvement in response accuracy</p>
+                        <p>🎯 95% user query coverage</p>
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Apache Airflow</span>
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">Pinecone</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">Neo4j</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Flight Recommendation System</h3>
+                    <p>An end-to-end airline recommendation platform featuring forecasting capabilities and cloud deployment for optimized flight suggestions.</p>
+                    <div class="project-metrics">
+                        <p>⚡ 35% faster data processing</p>
+                        <p>📊 30% enhanced recommendation accuracy</p>
+                        <p>✨ 92% success rate</p>
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Amazon S3</span>
+                        <span class="skill-tag">ARIMA</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">R</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>ML Frameworks</h3>
+                <div class="skills">
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag">Keras</span>
+                    <span class="skill-tag">Hugging Face</span>
+                    <span class="skill-tag">OpenAI API</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Cloud & Tools</h3>
+                <div class="skills">
+                    <span class="skill-tag">AWS S3</span>
+                    <span class="skill-tag">Google Cloud AI</span>
+                    <span class="skill-tag">Snowflake</span>
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">Power BI</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Data Science Co-op at Takachar</h3>
+                <p class="date">February 2024 – August 2024</p>
+                <p>Led data collection optimization and analysis initiatives, achieving significant improvements in efficiency and equipment performance. Contributed to the team's success in the XPrize Carbon Removal contest.</p>
+                <div class="project-metrics">
+                    <p>📈 30% optimization in data collection</p>
+                    <p>⚡ 18% reduction in equipment downtime</p>
+                    <p>🏆 Top-20 finalist in $50M XPrize contest</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
